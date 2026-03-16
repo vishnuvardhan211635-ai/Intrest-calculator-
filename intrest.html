@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Interest Calculator</h2>
+        
+        <div class="input-group">
+            <label>Principal Amount (₹)</label>
+            <input type="number" id="principal" placeholder="Enter Amount">
+        </div>
+
+        <div class="input-group">
+            <label>Interest Type</label>
+            <select id="interestType">
+                <option value="percentage">Percentage (%) per year</option>
+                <option value="rupees">Rupees (₹) per 100 per month</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label id="rateLabel">Interest Rate (%)</label>
+            <input type="number" id="rate" placeholder="Enter Rate">
+        </div>
+
+        <div class="input-group">
+            <label>Start Date</label>
+            <input type="date" id="startDate">
+        </div>
+
+        <div class="input-group">
+            <label>End Date</label>
+            <input type="date" id="endDate">
+        </div>
+
+        <button onclick="calculateInterest()">Calculate</button>
+
+        <div id="result" class="result-box" style="display:none;">
+            <h3>Results:</h3>
+            <p id="timeDiff"></p>
+            <p id="interestAmount"></p>
+            <p id="totalAmount" class="highlight"></p>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
